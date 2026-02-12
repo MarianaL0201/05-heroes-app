@@ -1,10 +1,15 @@
+import { lazy } from "react";
+import { createBrowserRouter } from "react-router";
+
 import { AdminPage } from "@/admin/pages/AdminPage";
-import { AdminLayout } from "@/admin/pages/layouts/AdminLayout";
 import { HeroesLayout } from "@/heroes/layouts/HeroesLayout";
 import { HeroPage } from "@/heroes/pages/hero/HeroPage";
 import { HomePage } from "@/heroes/pages/home/HomePage";
 import { SearchPage } from "@/heroes/pages/search/SearchPage";
-import { createBrowserRouter } from "react-router";
+// import { AdminLayout } from "@/admin/pages/layouts/AdminLayout";
+
+const AdminLayout = lazy(() => import('@/admin/layouts/AdminLayout'))
+
 
 export const appRouter = createBrowserRouter([
     {
