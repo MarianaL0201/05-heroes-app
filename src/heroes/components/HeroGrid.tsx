@@ -1,8 +1,3 @@
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardContent } from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
-import { Heart, Eye, Zap, Brain, Gauge, Shield } from "lucide-react"
 import { HeroGridCard } from "./HeroGridCard"
 
 export const HeroGrid = () => {
