@@ -1,18 +1,10 @@
 import {
   Heart,
-  Zap,
-  Eye,
-  Brain,
-  Gauge,
-  Shield,
   ChevronLeft,
   ChevronRight,
   MoreHorizontal,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardHeader} from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CustomJumbotron } from "@/components/Custom/CustomJumbotron"
 import { HeroStats } from "@/heroes/components/HeroStats"
