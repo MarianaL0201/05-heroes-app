@@ -70,7 +70,15 @@ export const HeroGridCard = ({hero}: Props) => {
                 <h3 className="font-bold text-lg leading-tight">{hero.alias}</h3>
                 <p className="text-sm text-gray-600">{hero.name}</p>
               </div>
-              <Badge className="text-xs bg-green-100 text-green-800 border-green-200">{hero.category}</Badge>
+
+              {
+                (hero.category == 'Hero')?
+                (
+                  <Badge className="text-xs bg-green-100 text-green-800 border-green-200">{hero.category}</Badge>
+                ) : (
+                  <Badge className="text-xs bg-red-100 text-red-800 border-red-200">{hero.category}</Badge>
+                )
+              }
             </div>
             <Badge variant="outline" className="w-fit text-xs">
               {hero.team}

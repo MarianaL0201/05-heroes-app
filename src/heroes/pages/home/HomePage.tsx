@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query"
 import { useSearchParams } from "react-router"
 import { useMemo } from "react"
 
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CustomJumbotron } from "@/components/Custom/CustomJumbotron"
 import { HeroStats } from "@/heroes/components/HeroStats"
@@ -10,8 +9,6 @@ import { HeroGrid } from "@/heroes/components/HeroGrid"
 import { CustomPagination } from "@/components/Custom/CustomPagination"
 import { CustomBreadcrumbs } from "@/components/Custom/CustomBreadcrumbs"
 import { getHeroesByPageAction } from "@/heroes/actions/get-heroes-by-page.actions"
-
-
 
 export const HomePage = () => {
 
@@ -27,7 +24,7 @@ export const HomePage = () => {
   }, [activeTab])
 
   const {data: heroesResponse} = useQuery({
-    queryKey: ['heroes'],
+    queryKey: ['heroes', {page, limit }],
     queryFn: () => getHeroesByPageAction(+page, +limit),
     staleTime: 1000 * 60 * 5, // 5 minutos
   })
@@ -113,12 +110,10 @@ export const HomePage = () => {
             {/* Mostrar todos los villanos */}
             <h1>Villanos</h1>
           </TabsContent>
-
         </Tabs>
 
-
         {/* Pagination */}
-        <CustomPagination totalPages={8}/>
+        <CustomPagination totalPages={heroesResponse?.pages ?? 1}/>
       </>
     </>
   )
