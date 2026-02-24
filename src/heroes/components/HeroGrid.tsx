@@ -7,8 +7,8 @@ export const HeroGrid = () => {
         
           {/* Hero Card 1 - Superman */}
           <HeroGridCard 
-            heroName="Superman" 
-            name="Clark Kent"            
+            heroName="Wolverine" 
+            name="Logan"            
           />
           
 
