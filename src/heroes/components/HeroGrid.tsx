@@ -19,8 +19,6 @@ export const HeroGrid = ({heroes}: Props) => {
 
         }
 
-          
-
         </div>
   );
 };

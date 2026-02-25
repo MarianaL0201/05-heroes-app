@@ -200,43 +200,7 @@ export const HeroPage = () => {
             </div>
 
             {/* Power Comparison Chart */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Comparación de Habilidades</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4">
-                    <div className="w-24 text-sm font-medium">Fuerza</div>
-                    <div className="flex-1">
-                      <Progress value={superheroData.strength * 10} className="h-4" />
-                    </div>
-                    <div className="w-12 text-right font-bold">{superheroData.strength}/10</div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-24 text-sm font-medium">Inteligencia</div>
-                    <div className="flex-1">
-                      <Progress value={superheroData.intelligence * 10} className="h-4" />
-                    </div>
-                    <div className="w-12 text-right font-bold">{superheroData.intelligence}/10</div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-24 text-sm font-medium">Velocidad</div>
-                    <div className="flex-1">
-                      <Progress value={superheroData.speed * 10} className="h-4" />
-                    </div>
-                    <div className="w-12 text-right font-bold">{superheroData.speed}/10</div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-24 text-sm font-medium">Resistencia</div>
-                    <div className="flex-1">
-                      <Progress value={superheroData.durability * 10} className="h-4" />
-                    </div>
-                    <div className="w-12 text-right font-bold">{superheroData.durability}/10</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            
           </TabsContent>
 
           <TabsContent value="powers">
