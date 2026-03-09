@@ -1,0 +1,1 @@
+import{n as e,t}from"./index-BPGyaHhN.js";var n=t();const r=()=>(0,n.jsx)(`div`,{className:`bg-blue-500`,children:(0,n.jsx)(e,{})});export{r as AdminLayout,r as default};
